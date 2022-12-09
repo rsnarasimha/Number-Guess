@@ -109,22 +109,53 @@ INSERT INTO public.games VALUES (1, 2, 18);
 INSERT INTO public.games VALUES (3, 1, 26);
 INSERT INTO public.games VALUES (3, 2, 19);
 INSERT INTO public.games VALUES (1, 3, 21);
+INSERT INTO public.games VALUES (3, 3, 24);
+INSERT INTO public.games VALUES (6, 1, 15);
+INSERT INTO public.games VALUES (1, 4, 5);
+INSERT INTO public.games VALUES (7, 1, 6);
+INSERT INTO public.games VALUES (7, 2, 8);
+INSERT INTO public.games VALUES (2, 2, 6);
+INSERT INTO public.games VALUES (53, 1, 8);
+INSERT INTO public.games VALUES (54, 1, 470);
+INSERT INTO public.games VALUES (54, 2, 641);
+INSERT INTO public.games VALUES (55, 1, 497);
+INSERT INTO public.games VALUES (55, 2, 273);
+INSERT INTO public.games VALUES (54, 3, 922);
+INSERT INTO public.games VALUES (54, 4, 532);
+INSERT INTO public.games VALUES (54, 5, 155);
+INSERT INTO public.games VALUES (56, 1, 12);
+INSERT INTO public.games VALUES (56, 2, 8);
+INSERT INTO public.games VALUES (57, 1, 397);
+INSERT INTO public.games VALUES (57, 2, 401);
+INSERT INTO public.games VALUES (58, 1, 593);
+INSERT INTO public.games VALUES (58, 2, 577);
+INSERT INTO public.games VALUES (57, 3, 127);
+INSERT INTO public.games VALUES (57, 4, 86);
+INSERT INTO public.games VALUES (57, 5, 599);
 
 
 --
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.users VALUES (1, 'Ashley', 3, 18);
-INSERT INTO public.users VALUES (2, 'Brian', 1, 15);
-INSERT INTO public.users VALUES (3, 'Cathy', 2, 19);
+INSERT INTO public.users VALUES (3, 'Cathy', 3, 19);
+INSERT INTO public.users VALUES (6, 'Brenda', 1, 15);
+INSERT INTO public.users VALUES (1, 'Ashley', 4, 5);
+INSERT INTO public.users VALUES (7, 'Arianna', 2, 6);
+INSERT INTO public.users VALUES (2, 'Brian', 2, 6);
+INSERT INTO public.users VALUES (53, 'Mia', 1, 8);
+INSERT INTO public.users VALUES (55, 'user_1670597792119', 2, 273);
+INSERT INTO public.users VALUES (54, 'user_1670597792120', 5, 155);
+INSERT INTO public.users VALUES (56, 'Butler', 2, 8);
+INSERT INTO public.users VALUES (58, 'user_1670599102432', 2, 577);
+INSERT INTO public.users VALUES (57, 'user_1670599102433', 5, 86);
 
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 3, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 58, true);
 
 
 --
@@ -144,6 +175,14 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_username_key UNIQUE (username);
+
+
+--
 -- Name: games games_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
@@ -154,4 +193,3 @@ ALTER TABLE ONLY public.games
 --
 -- PostgreSQL database dump complete
 --
-
